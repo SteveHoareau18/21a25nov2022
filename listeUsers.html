@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <title>Démo</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" type="image/x-icon" href="https://icons.getbootstrap.com/assets/icons/rocket-takeoff.svg">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+            <link href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container text-center">
+            <div class="card">
+                <div class="card-header">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+                      </svg>
+                      Démo | Gestion des utilisateurs
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">Liste des utilisateurs</h4>
+                    <div class="container">
+                        <div class="table-responsive">
+                            <table id="lstUsers" class="table table-primary">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Nom</th>
+                                        <th scope="col">Date de naissance</th>
+                                        <th scope="col">Mot de passe</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="">
+                                        <td scope="row">admin</td>
+                                        <td>21/11/1977</td>
+                                        <td>**************</td>
+                                    </tr>
+                                    <tr class="">
+                                        <td scope="row">tech</td>
+                                        <td>11/01/1988</td>
+                                        <td>*********</td>
+                                    </tr>
+                                    <tr class="">
+                                        <td scope="row">user1</td>
+                                        <td>21/10/2002</td>
+                                        <td>***********</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-grid gap-2">
+                    <a href="index.html"><button type="button" name="" id="" class="btn btn-primary"><< Retour</button></a>
+                </div>
+                <div class="card-footer text-muted">
+                    Démo © 2022
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+            integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+            integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+        <script src="https://releases.jquery.com/git/jquery-git.slim.min.js"></script>
+        <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js">
+        </script>
+        <script>
+        $(document).ready( function () {
+            $('#lstUsers').DataTable({
+                "paging": false,
+        "ordering": false,
+        "info": false,
+                "language": {
+                "sEmptyTable":     "Aucune donnée disponible dans le tableau",
+                "sInfo":           "Affichage de l'élément _START_ à _END_ sur _TOTAL_ éléments",
+                "sInfoEmpty":      "Affichage de l'élément 0 à 0 sur 0 élément",
+                "sInfoFiltered":   "(filtré à partir de _MAX_ éléments au total)",
+                "sInfoPostFix":    "",
+                "sInfoThousands":  ",",
+                "sLengthMenu":     "Afficher _MENU_ éléments",
+                "sLoadingRecords": "Chargement...",
+                "sProcessing":     "Traitement...",
+                "sSearch":         "Rechercher :",
+                "sZeroRecords":    "Aucun élément correspondant trouvé",
+                "oPaginate": {
+                    "sFirst":    "Premier",
+                    "sLast":     "Dernier",
+                    "sNext":     "Suivant",
+                    "sPrevious": "Précédent"
+                },
+                "oAria": {
+                    "sSortAscending":  ": activer pour trier la colonne par ordre croissant",
+                    "sSortDescending": ": activer pour trier la colonne par ordre décroissant"
+                },
+                "select": {
+                    "rows": {
+                        "_": "%d lignes sélectionnées",
+                        "0": "Aucune ligne sélectionnée",
+                        "1": "1 ligne sélectionnée"
+                    }
+                }
+            }
+        });
+    });
+        </script>
+    </body>
+</html>

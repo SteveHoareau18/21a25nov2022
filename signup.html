@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Démo ⚫ Inscription</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon" href="https://icons.getbootstrap.com/assets/icons/rocket-takeoff.svg">
+</head>
+
+<body>
+  <header>
+    <!-- place navbar here -->
+  </header>
+  <main>
+    <div class="container">
+        <div class="card">
+            <div class="card-header text-center">
+                Inscription
+            </div>
+            <div class="text-center">
+
+                    <form class="form-signin w-100 m-auto"> 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+                          </svg>
+                        <h1 class="h3 mb-3 fw-normal">Inscrivez-vous</h1>
+                            <div class="row justify-content-center align-items-center g-2">
+                                <div class="mb-12 col-6">
+                                    <div class="form-floating">
+                                            <label for="inputNom" class="form-label">Nom</label>
+                                            <input type="text"
+                                            class="form-control" name="inputNom" id="inputNom" placeholder="Votre nom..." required pattern="[a-zA-Zéèêàâ]*">
+                                    </div>
+                                </div>
+                                <div class="mb-6 col-6">
+                                    <div class="form-floating">
+                                        <label for="inputPrenom" class="form-label">Prénom</label>
+                                        <input type="text"
+                                        class="form-control" name="inputPrenom" id="inputPrenom" placeholder="Votre prénom..." required pattern="[a-zA-Zéèêàâ]*">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-floating">
+                                <div class="mb-2">
+                                    <label for="inputMail" class="form-label" pattern="^[a-zA-Z0-9]+@gmail.com$">Mail</label>
+                                    <input type="email"
+                                    class="form-control" name="inputMail" id="inputMail" placeholder="Votre mail..." required>
+                                </div>
+                            </div>
+                            <div class="form-floating">
+                                <div class="mb-2">
+                                    <label for="inputPseudo" class="form-label">Pseudo</label>
+                                    <input type="text"
+                                    class="form-control" name="inputPseudo" id="inputPseudo" placeholder="Votre pseudo..." required>
+                                </div>
+                            </div>
+                            <div class="form-floating">
+                                <div class="mb-2">
+                                    <label for="inputMDP" class="form-label">Mot de passe</label>
+                                    <input type="password"
+                                    class="form-control" name="inputMDP" id="inputMDP" placeholder="Votre mot de passe..." required>
+                                </div>
+                            </div>
+                            <div class="form-floating">
+                                <div class="mb-2">
+                                    <label for="inputCheckMDP" class="form-label">Confirmation de votre mot de passe</label>
+                                    <input type="password"
+                                    class="form-control" name="inputCheckMDP" id="inputCheckMDP" placeholder="Votre mot de passe..." required onfocusout="verifMDP()">
+                                    <div id="inputCheckMDPAlert" class="alert alert-danger" role="alert" style="display:none">
+                                        Le mot de passe ne correspond pas...
+                                    </div>
+                                </div>
+                            </div>
+
+                        <button class="w-100 btn btn-lg btn-primary" type="submit">S'inscrire</button>
+                      </form>
+            </div>
+            <div class="card-footer text-muted text-center">
+                Démo © 2022
+            </div>
+        </div>
+        
+    </div>
+  </main>
+  <footer>
+    <!-- place footer here -->
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+  <script src="index.js"></script>
+</body>
+
+</html>
