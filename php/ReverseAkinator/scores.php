@@ -1,8 +1,11 @@
+<?php
+session_start();
+?>
 <!doctype html>
-<html lang="fr">
+<html lang="en">
 
 <head>
-  <title>Tableau dynamique</title>
+  <title>Title</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -18,50 +21,26 @@
     <!-- place navbar here -->
   </header>
   <main>
-  <?php
-    if(isset($_GET["tableau"])){
-        $utilisateurs = [];
-        $utilisateurs[count($utilisateurs)] = array(
-            "nom"=>"Hoareau",
-            "prenom"=>"Steve",
-            "age"=>20
-        );
-        $utilisateurs[count($utilisateurs)] = array(
-            "nom"=>"Clain",
-            "prenom"=>"Maxime",
-            "age"=>20
-        );
-        $utilisateurs[count($utilisateurs)] = array(
-            "nom"=>"Ranguin",
-            "prenom"=>"Tony",
-            "age"=>19
-        );
-        ?>
-        <table class="table table-striped-columns table-bordered border-secondary">
+    <div class="table-responsive">
+        <table class="table table-primary">
             <thead>
                 <tr>
                     <th scope="col">Nom</th>
-                    <th scope="col">Prénom</th>
-                    <th scope="col">Âge</th>
+                    <th scope="col">Score</th>
                 </tr>
             </thead>
             <tbody>
-                <?php  
-                    foreach($utilisateurs as $utilisateur){
-                        echo "<tr>";
-                        foreach($utilisateur as $champ){
-                            echo "<td>".$champ."</td>";
+                <?php
+                    foreach($_SESSION as $key=>$value){
+                        if($key !== "nombre"){
+                            echo "<tr><td>".$key."</td><td>".$value."</td></tr>";
                         }
-                        echo "</tr>";
                     }
                 ?>
             </tbody>
         </table>
-        <?php
-    }else if(isset($_GET['version'])){
-        die(phpinfo());
-    }
-?>
+    </div>
+    <a name="btnRetour" id="btnRetour" class="btn btn-primary" href="index.php" role="button">Retour</a>
   </main>
   <footer>
     <!-- place footer here -->
